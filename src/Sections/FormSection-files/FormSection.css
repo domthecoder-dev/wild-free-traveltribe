@@ -1,0 +1,79 @@
+.FormSec-container {
+    padding: 5px 20px;
+    background-color: #F5F5DC; 
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Custom-Form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid rgba(121, 160, 195, 0.3); 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: white; 
+}
+
+.Form-Group {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.Form-Group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333; 
+}
+
+.Form-Group input {
+    width: 95%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.Form-Group input:focus {
+    border-color: #79A0C3; 
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(121, 160, 195, 0.3);
+}
+
+.Form-Group input[aria-invalid="true"] {
+    border-color: #B5777F; 
+}
+
+.Error-Text {
+    color: #B5777F; 
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.Submit-Button {
+    background-color: #79A0C3;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    margin-top: 15px;
+}
+
+.Submit-Button:hover:not(:disabled) {
+    background-color: #5d84a8; 
+}
+
+.Submit-Button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}

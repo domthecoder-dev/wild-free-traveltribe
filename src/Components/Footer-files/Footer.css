@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+.Nav-Container {
+    background-color: #8f9c82;
+    width: 100%;
+    padding: 7px 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NVLogo {
+    width: 350px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Nav-Links {
+    display: flex;
+}
+
+.NVLinks-list {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    margin: 0 80px 0 0;
+    padding: 0;
+}
+
+.NVLinks-list li a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    padding-right: 15px;
+}
+
+.NVLinks-list li {
+    border-right: 1.5px solid black;
+}
+
+.NVLinks-list li:nth-last-child(1) {
+    border-right: none;
+}
+
+.NVLinks-list li a:hover {
+    color: #965C69;
+    cursor: pointer;
+}
+
+.Credit-footer {
+    text-align: center;
+    font-size: 15px;
+}
+
+.CreditLink {
+    text-decoration: none;
+}
+
+.CreditLink:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.Orange-letter {
+    color: #fea603;
+    font-weight: bold;
+}
+
+.Blue-letter {
+    color: #1495e3;
+    font-weight: bold;
+}
+
+.Grey-Name {
+    color: rgb(185, 185, 185);
+}

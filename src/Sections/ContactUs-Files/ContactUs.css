@@ -1,0 +1,27 @@
+.ContactSec-Container {
+    text-align: center;
+    Padding: 15px 0 55px 0px;
+}
+
+.ContactSec-Container ul {
+    list-style-type: none;
+    font-size: 26px;
+}
+
+.ContactSec-Container ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.ContactSec-Container ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .ContactSec-Container {
+    Padding: 0 0 15px 0;
+}
+.ContactSec-Container ul {
+    font-size: 20px;
+}
+}

@@ -1,0 +1,189 @@
+/* ==================================== */
+/* 1. CONTAINER & LAYOUT (3 COLUMNS) */
+/* ==================================== */
+
+.Packages-title {
+    text-align: center;
+    background-color: #d1d1ba;
+    margin: 15px 0 0 0;
+    padding: 5px 0 0 0;
+}
+
+.Packages-Container {
+    /* Set up the container for a three-column layout */
+    display: flex;
+    justify-content: center;
+    /* Center the entire row of cards */
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 30px;
+    /* Space between the cards */
+    padding: 60px 20px;
+    background-color: #d1d1ba;
+    width: 100%;
+    margin: 0 auto;
+    /* Center the max-width container */
+}
+
+/* ==================================== */
+/* 2. CARD STYLING & STRUCTURE */
+/* ==================================== */
+
+.Package-Card {
+    /* Essential: Allows the content box to overlap the image */
+    position: relative;
+
+    /* Set a fixed or maximum width for the card */
+    width: 100%;
+    max-width: 350px;
+
+    /* Use the background color from the bottom box for the whole card */
+    background-color: #d1d1ba;
+    /* A light, soft blue/white color */
+
+    /* Optional: Small border-radius for the entire card */
+    border-radius: 8px;
+}
+
+/* ==================================== */
+/* 3. IMAGE BOX & IMAGE */
+/* ==================================== */
+
+.Package-Image-Box {
+    /* Set up the stacking context for the price overlay */
+    position: relative;
+    height: 290px;
+    /* Fixed height for consistent image size */
+    overflow: hidden;
+    /* Ensures the image doesn't bleed out */
+}
+
+.Package-Image {
+    /* Make the image fill the box and maintain aspect ratio */
+    width: 78%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the entire area */
+    display: block;
+}
+
+/* ==================================== */
+/* 4. TEXT CONTENT (OVERLAY EFFECT) */
+/* ==================================== */
+
+.Package-Content-Box {
+
+    left: 20px;
+    /* CRITICAL for the overlay effect: Move the box UP */
+    position: relative;
+
+    /* Adjust this value based on how much you want the text box to overlap the image */
+    margin-top: -80px;
+
+    /* Padding for the text inside the box */
+    padding: 20px 5px 20px;
+
+    /* Match the background color of the overlapping area (you can use white or a light blue) */
+    background-color: #e6f0ff;
+    /* Light blue background for the content box */
+
+    /* Optional: Rounded top corners to visually blend the overlap */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 80%;
+    height: 280px;
+
+    text-align: center;
+
+    /* Z-index ensures the content box sits above the image */
+    z-index: 2;
+}
+
+.Package-Content-Box h3 {
+    /* Style for the package title */
+    color: #1a4d7d;
+    /* A deep blue color for contrast */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.Package-Content-Box p {
+    /* Style for the description text */
+    color: #333;
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+/* ==================================== */
+/* 5. PRICE OVERLAY (The price text on the image) */
+/* ==================================== */
+
+.Package-Price-Overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    /* Example background for the price bar (adjust as needed) */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 3;
+    /* Ensure the price is above the image */
+
+    /* You need to manually add the price text in PackageSec.jsx now */
+}
+
+/* ==================================== */
+/* 6. MEDIA QUERY (For responsiveness) */
+/* ==================================== */
+
+/* Switch to a single column on smaller screens (e.g., phones) */
+/* 6. MEDIA QUERY (Max-width 900px) */
+@media (max-width: 900px) {
+    .Packages-Container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0 25px 0;
+        width: 100vw;
+    }
+
+    .Package-Card {
+        max-width: 90%;
+        margin: 0;
+    }
+
+    .Package-Image-Box {
+        /* Set up the stacking context for the price overlay */
+        position: relative;
+        height: 290px;
+        /* Fixed height for consistent image size */
+        overflow: hidden;
+        /* Ensures the image doesn't bleed out */
+    }
+
+    .Package-Image {
+        /* Make the image fill the box and maintain aspect ratio */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the entire area */
+        display: block;
+    }
+
+    /* FIX: Override the mobile-specific fix that restricted the width */
+    .Package-Content-Box {
+        /* The base styles above make these mobile overrides unnecessary and counter-productive */
+        left: 0;
+        /* Ensures no left offset */
+        width: 97.5%;
+        /* Ensure it spans the card width */
+        overflow: visible;
+        /* Prevent unwanted scrollbars */
+    }
+}

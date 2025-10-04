@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* Add this to index.css */
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+/* Chrome mobile specific fix */
+@supports (-webkit-touch-callout: none) {
+  .scroll-to-top {
+    position: -webkit-fixed; /* Safari/Chrome specific */
+  }
+}
+
+/* Force the button to stay put */
+.scroll-to-top {
+  transform: none !important;
+  will-change: auto !important;
+}
+/* Force the button to be truly fixed */
+.scroll-to-top {
+  position: fixed !important;
+  bottom: 100px !important;
+  right: 30px !important;
+  z-index: 10000 !important;
+  transform: none !important;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  margin: 0;
+  background-color: #F5F5DC;
+}
+
+/* Base (Desktop) Typography */
+h1 {
+  font-size: 40px; /* Base size */
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 35px; /* Base line height */
+}
+
+li {
+  line-height: 38px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+button {
+  font-weight: 600;
+}
+
+.menu-open-fix .HeroSec-container {
+    transform: none !important;
+    filter: none !important;
+    z-index: 1 !important;
+}
+
+.MobileBr {
+  display: none;
+}
+
+
+
+/* ================================================= */
+/* 📱 MOBILE OPTIMIZATIONS (Max-width 768px) */
+/* ================================================= */
+
+@media (max-width: 768px) {
+  
+  /* H1: Main page titles */
+  h1 {
+    font-size: 30px; /* Reduced from 40px */
+  }
+
+  /* H2: Section titles */
+  h2 {
+    font-size: 24px; /* Reduced from 35px */
+  }
+
+  /* H3: Sub-titles or card headers */
+  h3 {
+    font-size: 20px; /* Reduced from 30px */
+  }
+
+  /* Paragraphs and general text */
+  p {
+    font-size: 16px; /* Reduced from 20px */
+    line-height: 26px; /* Reduced from 35px for tighter spacing */
+  }
+
+  /* List items */
+  li {
+    font-size: 16px; /* Added for consistency */
+    line-height: 28px; /* Reduced from 38px */
+  }
+
+  .MobileBr {
+  display: block;
+}
+}

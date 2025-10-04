@@ -1,0 +1,89 @@
+/* ================================================= */
+/* DESKTOP/TABLET BASE STYLES (Default Layout) */
+/* ================================================= */
+.Software-Container {
+    text-align: center;
+    justify-items: center;
+    /* Optional: Add maximum width and center it */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Table CSS (Only for wider screens) */
+table {
+    width: 100%; /* Change from fixed 800px to full width */
+    max-width: 800px; /* Keep the original size as the maximum */
+    height: auto; /* Change from fixed 400px to auto */
+    text-align: left;
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Clean up borders */
+}
+
+/* Feature Icon (Needs correction on width unit) */
+.Feature-Icon {
+    width: 140px;   /* Corrected: Removed 'x' after 140 */
+    height: 140px;
+    margin-right: 10px; 
+    flex-shrink: 0; 
+    object-fit: contain; /* Good for icons */
+}
+
+td h3 {
+    padding: 0;
+    margin: 0;
+}
+
+/* ================================================= */
+/* 📱 MOBILE OPTIMIZATIONS (Max-width 768px) */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. FORCE TABLE TO STACK / HIDE TABLE HEADERS */
+    /* This is a common technique for responsive tables */
+    table, tbody, tr, td {
+        display: block; /* Treat all table elements as block-level divs */
+        width: 95%;
+    }
+    
+    /* Optional: Remove table headers if you have any */
+    thead {
+        display: none;
+    }
+    
+    tr {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
+    td {
+        border: none;
+        padding: 8px 0;
+        text-align: center; /* Center content within the cell */
+    }
+
+    /* 2. Resize Icons for Mobile */
+    .Feature-Icon {
+        width: 80px;  /* Make icons smaller on mobile */
+        height: 80px;
+        margin: 0 auto 10px auto; /* Center the icon above the text */
+        display: block; /* Ensure the icon takes its own line */
+    }
+
+    /* 3. Ensure Text is Stacked */
+    td h3 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    /* If you have the icon and text in a single cell, you might need to adjust: */
+    /* If the cell content uses flexbox to keep them inline on mobile, remove 'display: block' from the icon */
+    .App-Feature-Item { /* Reuse the list item class from earlier for inline layout */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

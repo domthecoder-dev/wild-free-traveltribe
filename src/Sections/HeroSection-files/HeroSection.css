@@ -1,0 +1,72 @@
+.HeroSec-container {
+    height: 500px;
+    /* Base height for desktop/tablet */
+    background-image: url(../../Images/RoadImg1.jpg);
+
+    /* Ensuring the background position is correct (using the fixed syntax) */
+    background-position: center calc(100% - 5px);
+    /* Corrected '-' for offset from bottom */
+
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeroSec-CTA {
+    background-color: rgba(143, 156, 130, 0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 20px 40px;
+    /* Base padding */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.HeroSec-CTA h1 {
+    color: #333;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    font-size: 3em;
+    /* Base font size */
+}
+
+/* ================================================= */
+/* 📱 MOBILE OPTIMIZATIONS (Max-width 600px) */
+/* ================================================= */
+
+@media (max-width: 600px) {
+    .HeroSec-container {
+        /* 1. Reduce the height so the hero section doesn't overwhelm the screen */
+        height: 340px;
+        width: 100%;
+
+        /* 🔥 THE CRITICAL FIX: */
+        /* Set background-attachment to scroll on mobile. 
+           This removes the superior stacking context that was causing the overlap. */
+        background-attachment: scroll;
+        background-position: center;
+
+    }
+
+    .HeroSec-CTA {
+        /* 2. Increase padding vertically, but decrease horizontally */
+        padding: 30px 15px;
+        width: 85%;
+        /* Ensure it doesn't hit the screen edges */
+        box-sizing: border-box;
+
+        /* Ensures padding is included in the 85% width */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+
+    .HeroSec-CTA h1 {
+        /* 3. Reduce the font size for the main heading */
+        font-size: 1.8em;
+        /* Ensure the text wraps cleanly without breaking the container */
+    }
+}

@@ -1,0 +1,11 @@
+.HomePage-contentSection {
+    margin: 60px 95px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .HomePage-contentSection {
+    margin: 15px 25px;
+    text-align: center;
+}
+}

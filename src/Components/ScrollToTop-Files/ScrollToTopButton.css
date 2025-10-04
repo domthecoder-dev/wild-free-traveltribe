@@ -1,0 +1,35 @@
+/* ScrollToTopButton.css */
+.scroll-to-top-container {
+  container-type: inline-size;
+  container-name: button-container;
+}
+
+.scroll-to-top {
+  position: fixed;
+  
+  /* Use container-relative units */
+  bottom: 10cqi; /* 10% of container inline size */
+  right: 10cqi;
+  
+  z-index: 10000;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  
+  /* Anchor positioning (experimental but promising) */
+  position-anchor: --viewport;
+}
+
+@container button-container (max-width: 600px) {
+  .scroll-to-top {
+    bottom: 5cqi;
+    right: 5cqi;
+    width: 70px;
+    height: 70px;
+  }
+}
