@@ -26,6 +26,8 @@
 
     .OurMission ul {
         align-self: center;
+        margin-left: 15px;
+        margin-right: 15px;
         list-style-type: "♡  ";
         font-size: 20px;
         line-height: 50px;
