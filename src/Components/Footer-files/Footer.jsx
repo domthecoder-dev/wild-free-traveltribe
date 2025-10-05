@@ -3,16 +3,6 @@ import WFLogo from '../../assets/wildandfree-rec.svg'
 import "./Footer.css"
 
 function Footer() {
- const scrollToSection = (id) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start' // Scrolls the element to the top of the viewport
-    });
-  }
-};
-
 // In your Navbar component's JSX:
 
   return (
