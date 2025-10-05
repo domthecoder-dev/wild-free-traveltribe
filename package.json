@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://domthecoder-dev.github.io/wild-free-traveltribe/",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
