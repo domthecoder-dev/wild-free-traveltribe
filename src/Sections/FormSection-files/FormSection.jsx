@@ -75,7 +75,7 @@ function FormSection() {
   return (
     <section id="Form" className="FormSec-container">
       <h2>Get to Know the Tribe</h2>
-      <p>Leave your details below and get a FREE Welcome Packet!</p>
+      <p>Leave your details below to access the Welcome Packet!</p>
 
       <form
         // 💡 Use the new handleSubmit function
@@ -113,7 +113,7 @@ function FormSection() {
           className="Submit-Button"
           disabled={!isFormValid || isSubmitted}
         >
-          {isSubmitted ? 'Thank You!' : 'Get My Checklist'}
+          {isSubmitted ? 'Thank You!' : 'Get My Welcome Packet'}
         </button>
         {isSubmitted &&
           // State is 'Submitted': Show the download link
