@@ -119,10 +119,10 @@ function FormSection() {
           // State is 'Submitted': Show the download link
           <p>✅ Download Packet: &nbsp;
           <a
-            href={PDF_URL}
-            download={PDF_FILENAME} 
+            href={"./WildandFreeWelcome.pdf"}
+            download={"Welcome Pack"} 
           >
-            {PDF_FILENAME}
+            {"Welcome Pack"}
           </a></p>
         }
       </form>
