@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import PDF from '../../assets/WildandFreeWelcome.pdf';
 import './FormSection.css';
 
 // *** VERIFIED GOOGLE FORM IDs (These are correct!) ***
