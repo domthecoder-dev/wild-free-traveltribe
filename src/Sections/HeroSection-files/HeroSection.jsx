@@ -6,7 +6,7 @@ function HeroSection() {
     <div id="Home" className="HeroSec-container">
       <div className="HeroSec-CTA">
         <h1>Wild and Free Travel Tribe</h1>
-        <h3>Safety. Sisterhood. Freemdom to Explore.</h3>
+        <h3>Safety. Sisterhood. Freedom to Explore.</h3>
       </div>
     </div>
   )
