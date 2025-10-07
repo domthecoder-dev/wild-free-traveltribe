@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react({
     include: '**/*.{jsx,tsx}', // Explicitly include JSX files
   })],
-  base: '/wild-free-traveltribe/',
+  base: '/',
   build: {
     rollupOptions: {
       input: './index.html',
