@@ -24,6 +24,10 @@
     display: flex;
 }
 
+.TTSSPLogo {
+    margin-right: 100px !important;
+}
+
 .NVLinks-list {
     display: flex;
     gap: 15px;
