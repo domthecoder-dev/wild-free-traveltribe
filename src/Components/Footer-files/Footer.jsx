@@ -20,7 +20,7 @@ function Footer() {
             <img 
               src={TTSSPLogo}
               alt="TTSSP Logo"
-              ClassName="TTSSPLogo"
+              className="TTSSPLogo"
             />
         </div>
       </div>

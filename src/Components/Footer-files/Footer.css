@@ -25,7 +25,7 @@
 }
 
 .TTSSPLogo {
-    margin-right: 100px !important;
+    margin-right: 100px;
 }
 
 .NVLinks-list {
@@ -82,4 +82,22 @@
 
 .Grey-Name {
     color: rgb(185, 185, 185);
+}
+
+@media (max-width: 768px) {
+
+    .Nav-bar {
+        display: flex;
+        flex-direction: column;
+    }
+    .NVLogo {
+        height: 130px;
+        width: 210px;
+    }
+
+    .TTSSPLogo {
+        height: 90px;
+        width: 90px;
+        margin-right: 0px;
+    }
 }

@@ -10,6 +10,7 @@ function ContactUs() {
         <li>WhatsApp:<br className="MobileBr"/><a href="https://wa.me/27827174772" target="_blank" alt="to travel agent's whatsapp"> +27 82 717 4772</a></li>
         <li>Email Us:<br className="MobileBr"/><a href="mailto: traveltribe@wildandfreezanzibar.com"> traveltribe@wildandfreezanzibar.com</a></li>
       </ul>
+      <p>Wild and Free Travel Tribe in partnership with <a href="https://www.tanzaniatourism.go.tz/health/" target="_blank" alt="to TTSSP website"> TANZANIA TOURISM SECTOR SAFETY AND PROTECTION</a></p>
     </div>
   )
 }
