@@ -20,11 +20,32 @@
     align-items: center;
 }
 
+
+
 .NVLogo {
-    width: 350px;
+    width: 150px;
     height: 150px;
     object-fit: cover;
-    object-position: center;
+    object-position: right;
+    padding: 0;
+
+    /* ---------------------------------------------------- */
+    /* ADD THIS LINE: Cut 50px inwards from the Right edge  */
+    clip-path: inset(0 45px 0 0px);
+    /* ---------------------------------------------------- */
+    margin-right: -45px;
+    margin-left: -40px;
+
+
+}
+
+.SheildLogo {
+    object-fit: fill;
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    margin-left: 0;
+    clip-path: inset(0 40px 0 0);
 }
 
 /* Desktop Link Layout */
@@ -122,6 +143,30 @@
 
     /* --- Menu Header & Close Button --- */
     /* ... (Header styles are fine) ... */
+
+    .NVLogo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        object-position: left;
+        padding: 0;
+
+        /* ---------------------------------------------------- */
+        /* ADD THIS LINE: Cut 50px inwards from the Right edge  */
+        clip-path: inset(0 0px 0 0);
+        /* ---------------------------------------------------- */
+        margin-left: -30px;
+    }
+
+    .SheildLogo {
+        object-fit: fill;
+        width: 150px;
+        height: 130px;
+        padding: 0;
+        margin-left: 0;
+         clip-path: inset(0 30px 0 30px);
+         margin-left: -75px;
+    }
 
     .Close-Icon {
         display: block;

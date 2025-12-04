@@ -13,7 +13,7 @@ function Footer() {
             <img
              src={WFLogo}
              alt="Safe Travel Group Wild and Free Logo"
-             className="NVLogo"
+             className="FootLogo"
             />
         </div>
         <div className="Nav-Links">
